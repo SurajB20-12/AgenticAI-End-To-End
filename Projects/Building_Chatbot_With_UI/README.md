@@ -64,15 +64,17 @@ To run this project, follow these steps:
 
    Start the Backend
 
-   ````bash
-    python Backend_langgraph.py
+   ```bash
+   python Backend_langgraph.py
+
+   ```
 
    Start the Backend
+
    ```bash
-    streamlit run Frontend_Steamlit.py
+   streamlit run Frontend_Steamlit.py
 
-
-   ````
+   ```
 
 ## Usage
 
