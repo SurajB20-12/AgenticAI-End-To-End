@@ -30,13 +30,15 @@ This project demonstrates the creation of a chatbot application using **LangGrap
 
 ## Project Structure
 
-Building_Chatbot_With_UI/
-├── Backend_langgraph.py # Backend implementation using LangGraph
-├── Frontend_Steamlit.py # Frontend implementation using Streamlit
-├── README.md # Project documentation
-├── pycache/ # Cached files (auto-generated)
-
----
+```
+└── 📁Building_Chatbot_With_UI
+    └── 📁__pycache__
+        ├── Backend_langgraph.cpython-314.pyc
+    ├── .env
+    ├── Backend_langgraph.py
+    ├── Frontend_Steamlit.py
+    └── README.md
+```
 
 ## Installation
 
