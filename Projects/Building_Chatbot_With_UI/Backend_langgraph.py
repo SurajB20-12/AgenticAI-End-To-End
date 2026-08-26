@@ -5,6 +5,8 @@ from langchain_core.messages import HumanMessage, BaseMessage
 from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph.message import add_messages
 from langchain_groq import ChatGroq
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
 
 from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_community.tools import DuckDuckGoSearchRun
@@ -19,7 +21,11 @@ load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
 llm = ChatGroq(model_name="openai/gpt-oss-120b", api_key=API_KEY)
-
+emb = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    model_kwargs={"device": "cpu"},
+    encode_kwargs={"normalize_embeddings": True},
+)
 
 search_tool = DuckDuckGoSearchRun(region="us-en")
 
